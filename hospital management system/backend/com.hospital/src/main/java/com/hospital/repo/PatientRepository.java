@@ -15,9 +15,9 @@ import com.hospital.bean.Patient;
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 	@Query("select p.pname,p.symptoms,p.mobile from Patient p where p.dpid = :did")
 	public List<Patient> findByDpid(@Param("did") int did);
-	@Query("select p from Patient p where p.dpid = :did and p.pstatus =='appointed' ")
+	@Query("select p from Patient p where p.dpid = :did and p.pstatus ='appointed' ")
 	public List<Patient> getappoinmentsByid(int did);
-	@Query("select p from Patient p where p.dpid = :did and p.pstatus =='discharged' ")
+	@Query("select p from Patient p where p.dpid = :did and p.pstatus ='discharged' ")
 	public List<Patient> dischargePatientByid(int did);
 	
 	

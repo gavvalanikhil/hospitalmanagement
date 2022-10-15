@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.expression.spel.support.ReflectivePropertyAccessor.OptimalPropertyAccessor;
 import org.springframework.stereotype.Service;
 
+import com.hospital.bean.Doctor;
 import com.hospital.bean.Patient;
 import com.hospital.repo.DoctorRepository;
 import com.hospital.repo.PatientRepository;
@@ -17,6 +18,11 @@ public class DoctorService {
 	DoctorRepository docrepo;
 	@Autowired
 	PatientRepository patrepo;
+	
+	public String saveDoctorDetails(Doctor doctor) {
+		docrepo.save(doctor);
+		return "doctor details saved successfully";
+	}
 	
 	public List<Patient> viewPatient(int did) {
 		List<Patient> result = patrepo.findByDpid(did);
