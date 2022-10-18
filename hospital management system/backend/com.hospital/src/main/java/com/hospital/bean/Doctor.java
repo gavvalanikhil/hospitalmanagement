@@ -93,6 +93,12 @@ public class Doctor {
 				+ ", emailid=" + emailid + ", address=" + address + ", dstatus=" + dstatus + ", dage=" + dage
 				+ ", dgender=" + dgender + ", listOfpat=" + listOfpat + "]";
 	}
+	public Doctor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	
 	
 	

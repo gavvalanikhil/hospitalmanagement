@@ -15,6 +15,7 @@ import com.hospital.repo.PatientRepository;
 public class AdminService {
 	@Autowired
 	PatientRepository patrepo;
+	@Autowired
 	DoctorRepository docrepo;
 	
 	public String saveDoctorDetails(Doctor doctor) {
@@ -143,7 +144,7 @@ public class AdminService {
 			p.setDpid(patient.getDpid());
 			p.setPstatus("appointed");
 			patrepo.saveAndFlush(p);
-			return "patient appointed is successfully";
+			return "patient appointment is booked successfully";
 			
 		}else {
 			return "patient record not found";

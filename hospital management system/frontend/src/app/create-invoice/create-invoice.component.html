@@ -1,0 +1,30 @@
+<div>
+    <h2>Create Invoice </h2>
+    <form [formGroup]="invoiceRef" (ngSubmit)="createInvoice()">
+        <label> Id : </label>
+        <input type="number" formControlName="id"><br/> <br/>
+        <label> Patient Name: </label>
+        <input type="text" formControlName="patientname"><br/> <br/>
+        <label> Admit Date :  </label>
+        <input type="text" formControlName="admitdate"><br/><br/>
+        <label> Disease :  </label>
+        <input type="text" formControlName="disease"><br/><br/>
+        <label> Doctor fee : </label>
+        <input type="text" formControlName="doctorfee"><br/><br/>
+        <label> Medicine cost : </label>
+        <input type="text" formControlName="medicinecost"><br/><br/>
+        <label> Othercharges : </label>
+        <input type="text" formControlName="othercharge"><br/><br/>
+        <label> Patient address : </label>
+        <input type="text" formControlName="patientaddress"><br/><br/>
+        <label> patient mobile : </label>
+        <input type="text" formControlName="patientmobile"><br/><br/>
+        <label> Releasedate : </label>
+        <input type="text" formControlName="releasedate"><br/><br/>
+        <label> Room charges : </label>
+        <input type="text" formControlName="roomcharge"><br/><br/>
+        <input type="submit" value="Create Invoice"/><br/>
+        <input type="reset" value="reset"/><br/>
+    </form><br/>
+    <span style="color:green">{{Msg}}</span>
+</div>
