@@ -8,6 +8,7 @@ export class Patient {
         public pstatus:string,
         public emailid:string,
         public mobile:string,
-        public symptoms:string
+        public symptoms:string,
+        public dpid:number
         ){}
 }

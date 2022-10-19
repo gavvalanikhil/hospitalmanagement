@@ -35,6 +35,17 @@ public class AdminService {
 	public List<Patient> viewAllPatients() {
 		return patrepo.findAll();
 	}
+	
+	public List<Patient> viewAdmissionRequest() {
+		return patrepo.viewAdmissionRequest();
+	}
+	
+	public List<Patient> viewAppointmentRequest() {
+		return patrepo.viewAppointmentRequest();
+	}
+	public List<Patient> viewDischargeRequest() {
+		return patrepo.viewDischargeRequest();
+	}
 	public String deleteDoctor(int did) {
 		Optional<Doctor> result = docrepo.findById(did);
 		if(result.isPresent()) {

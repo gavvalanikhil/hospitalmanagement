@@ -28,6 +28,16 @@ export class RetrieveDoctorsService {
     return this.http.get<Patient[]>(this.baseUrl+"/vpd");
   }
 
+  ViewAdmissionList():Observable<Patient[]> {
+    return this.http.get<Patient[]>(this.baseUrl+"/val");
+  }
+  ViewAppointmentList():Observable<Patient[]> {
+    return this.http.get<Patient[]>(this.baseUrl+"/vapl");
+  }
+  ViewDischargeList():Observable<Patient[]> {
+    return this.http.get<Patient[]>(this.baseUrl+"/vdr");
+  }
+
     deleteDoctorById(did:number):Observable<string> {
       return this.http.delete(this.baseUrl+"/ddd/"+did,{responseType:"text"});
     }
@@ -47,6 +57,19 @@ export class RetrieveDoctorsService {
 
     rejectPatientById(pid:number):Observable<any> {
       return this.http.patch(this.baseUrl+"/rp/"+pid,{responseType:"text"});
+    }
+
+    updatePatient(patient:any):Observable<string> {
+      return this.http.patch(this.baseUrl+"/aptp/",patient,{responseType:"text"});
+    }
+
+    // rejectAppointment(patient:any):Observable<string> {
+    //   return this.http.patch(this.baseUrl+"/dp/",patient,{responseType:"text"});
+    // }
+
+
+    dischargePatientById(pid:number):Observable<any> {
+      return this.http.patch(this.baseUrl+"/dp/"+pid,{responseType:"text"});
     }
   
 }

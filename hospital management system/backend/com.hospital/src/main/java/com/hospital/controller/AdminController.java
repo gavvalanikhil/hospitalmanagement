@@ -82,8 +82,9 @@ public class AdminController {
 
 	}
 	
-	@PatchMapping(value="aptp",produces = MediaType.APPLICATION_JSON_VALUE)
+	@PatchMapping(value="aptp",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String appointPatient(@RequestBody Patient patient) {
+		System.out.println(patient);
 		return adminserve.appointPatient(patient);
 		
 
@@ -101,6 +102,24 @@ public class AdminController {
 		
 
 	}
+	
+	@GetMapping(value="vapl",produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Patient> viewAppointmentList() {
+		return adminserve.viewAppointmentRequest();
+		
+	}
+	@GetMapping(value="val",produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Patient> viewAdmissionList() {
+		return adminserve.viewAdmissionRequest();
+		
+	}
+	
+	@GetMapping(value="vdr",produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Patient> viewDischargeList() {
+		return adminserve.viewDischargeRequest();
+		
+	}
+
 
 
 }

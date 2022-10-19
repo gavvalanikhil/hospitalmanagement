@@ -21,6 +21,12 @@ public interface PatientRepository extends JpaRepository<Patient, Integer> {
 	public List<Patient> dischargePatientByid(int did);
 	@Query("select p from Patient p where p.pstatus = 'appointed' ")
 	public List<Patient> viewAllAppointments();
+	@Query("select p from Patient p where p.pstatus = 'NULL' ")
+	public List<Patient> viewAdmissionRequest();
+	@Query("select p from Patient p where p.pstatus = 'admitted' ")
+	public List<Patient> viewAppointmentRequest();
+	@Query("select p from Patient p where p.pstatus = 'consulted' ")
+	public List<Patient> viewDischargeRequest();
 	
 	
 	

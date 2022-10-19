@@ -11,8 +11,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @Entity
 public class Invoice {
 	@Id
-	private int id;
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
 	
 	@Column(name="admitdate")
 	private String admitdate;

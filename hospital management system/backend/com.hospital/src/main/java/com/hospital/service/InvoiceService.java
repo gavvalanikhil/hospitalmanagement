@@ -14,6 +14,7 @@ public class InvoiceService {
 	@Autowired
 	InvoiceRepository invoiceRepository;
 	
+	
 	public List<Invoice> getAll(){
 		return invoiceRepository.findAll();
 	}
@@ -22,4 +23,6 @@ public class InvoiceService {
 		invoiceRepository.save(invoice);
 		return "Invoice created";
 	}
+	
+	
 }

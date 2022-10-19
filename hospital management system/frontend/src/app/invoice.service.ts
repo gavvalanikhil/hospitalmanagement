@@ -15,6 +15,11 @@ export class InvoiceService {
   }
 
   createInvoices(invoice:any): Observable<string> {
-   return this.http.post(this.url+"/createInvoice",invoice,{responseType:"text"});
+   return this.http.post(this.url+"/createInvoices",invoice,{responseType:"text"});
+  }
+
+  read(id: any): Observable<Invoice[]> {
+    console.log(id)
+    return this.http.get<Invoice[]>(this.url+"/gin/"+id);
   }
 }

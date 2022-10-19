@@ -11,10 +11,11 @@ export class ViewpatientComponent implements OnInit {
   constructor(public rds:RetrieveDoctorsService) { }
 
   ngOnInit(): void {
-    this.viewPatientList()
+    this.viewAdmissionList()
   }
+  
 
-  viewPatientList() {
+  viewAdmissionList(){
     this.rds.ViewPatientList().subscribe({
       next:(result:any)=>this.patients=result,
       error:(error:any)=>console.log(error),
@@ -26,7 +27,7 @@ export class ViewpatientComponent implements OnInit {
     this.rds.approvePatientById(pid).subscribe({
       next:(result:any)=>console.log(result),
     error:(error:any)=>console.log(error),
-    complete:()=>{this.viewPatientList();}
+    complete:()=>{this.viewAdmissionList();}
     })
   }
     
@@ -37,12 +38,10 @@ export class ViewpatientComponent implements OnInit {
     this.rds.rejectPatientById(pid).subscribe({
       next:(result:any)=>console.log(result),
     error:(error:any)=>console.log(error),
-    complete:()=>{this.viewPatientList();}
+    complete:()=>{this.viewAdmissionList();}
     })
   }}
-  dischargepatient(){
-
-  }
+ 
 
 
 }

@@ -1,12 +1,11 @@
 <div>
     <h2>Create Invoice </h2>
     <form [formGroup]="invoiceRef" (ngSubmit)="createInvoice()">
-        <label> Id : </label>
-        <input type="number" formControlName="id"><br/> <br/>
+       
         <label> Patient Name: </label>
         <input type="text" formControlName="patientname"><br/> <br/>
         <label> Admit Date :  </label>
-        <input type="text" formControlName="admitdate"><br/><br/>
+        <input type="date" formControlName="admitdate"><br/><br/>
         <label> Disease :  </label>
         <input type="text" formControlName="disease"><br/><br/>
         <label> Doctor fee : </label>
@@ -20,9 +19,12 @@
         <label> patient mobile : </label>
         <input type="text" formControlName="patientmobile"><br/><br/>
         <label> Releasedate : </label>
-        <input type="text" formControlName="releasedate"><br/><br/>
+        <input type="date" formControlName="releasedate"><br/><br/>
         <label> Room charges : </label>
         <input type="text" formControlName="roomcharge"><br/><br/>
+        <div>
+            <input type="submit" onclick="window.print()" value="Print Invoice"/>
+        </div>
         <input type="submit" value="Create Invoice"/><br/>
         <input type="reset" value="reset"/><br/>
     </form><br/>

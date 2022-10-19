@@ -10,7 +10,7 @@ import { InvoiceService } from '../invoice.service';
 export class CreateInvoiceComponent implements OnInit {
   Msg:string = "";
   invoiceRef = new FormGroup({
-    id:new FormControl(),
+    
     admitdate : new FormControl(),
     disease: new FormControl(),
     doctorfee: new FormControl(),

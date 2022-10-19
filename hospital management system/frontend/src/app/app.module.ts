@@ -15,6 +15,10 @@ import { ViewpatientComponent } from './viewpatient/viewpatient.component';
 import { ViewDoctorComponent } from './view-doctor/view-doctor.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { CreateInvoiceComponent } from './create-invoice/create-invoice.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { ViewAllpatientsComponent } from './view-allpatients/view-allpatients.component';
+import { DischargepatientComponent } from './dischargepatient/dischargepatient.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { CreateInvoiceComponent } from './create-invoice/create-invoice.componen
     ViewpatientComponent,
     ViewDoctorComponent,
     InvoiceComponent,
-    CreateInvoiceComponent
+    CreateInvoiceComponent,
+    AppointmentComponent,
+    ViewAllpatientsComponent,
+    DischargepatientComponent,
+    
   ],
   imports: [
     BrowserModule,

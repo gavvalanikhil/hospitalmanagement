@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.hospital.repo.PatientRepository"/>
     <fullyQualifiedTypeName name="com.hospital.repo.DoctorRepository"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="com.hospital.service.DoctorService"/>
     <fullyQualifiedTypeName name="com.hospital.service.AdminService"/>
@@ -41,9 +40,10 @@
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.hospital.bean.Invoice"/>
     <fullyQualifiedTypeName name="com.hospital.repo.InvoiceRepository"/>
     <fullyQualifiedTypeName name="com.hospital.service.InvoiceService"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.hospital.bean.Invoice"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 </qualifiedTypeNameHistroy>
