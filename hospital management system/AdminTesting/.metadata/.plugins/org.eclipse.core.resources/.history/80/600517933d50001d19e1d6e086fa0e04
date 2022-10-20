@@ -1,0 +1,9 @@
+package com.patient;
+
+import org.testng.annotations.Test;
+
+public class patientTest {
+  @Test
+  public void f() {
+  }
+}

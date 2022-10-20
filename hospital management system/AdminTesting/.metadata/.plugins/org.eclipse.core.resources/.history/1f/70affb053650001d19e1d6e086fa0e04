@@ -1,0 +1,9 @@
+package com.admin;
+
+import org.testng.annotations.Test;
+
+public class adminTesting {
+  @Test
+  public void f() {
+  }
+}

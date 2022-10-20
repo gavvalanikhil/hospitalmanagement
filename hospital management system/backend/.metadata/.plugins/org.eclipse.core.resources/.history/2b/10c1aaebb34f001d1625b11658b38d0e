@@ -1,0 +1,36 @@
+package com.adminService.test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hospital.bean.Doctor;
+import com.hospital.repo.DoctorRepository;
+import com.hospital.service.AdminService;
+
+@RunWith(Suite.class)
+@SuiteClasses({})
+@SpringBootTest
+@SelectPackages("com.hospital")
+
+public class AllTests {
+	
+	@Autowired
+	AdminService as;
+	
+	@Test
+	public void saveDoctorDetails() {
+		Doctor obj = new Doctor();
+		String result = as.saveDoctorDetails(obj);
+		
+		assertEquals(result, "doctor details saved successfully");
+	}
+
+}
